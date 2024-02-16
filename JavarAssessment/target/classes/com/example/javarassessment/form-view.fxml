@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javarassessment.FormController">
+   <children>
+      <VBox prefHeight="401.0" prefWidth="290.0">
+         <children>
+            <HBox alignment="CENTER" prefWidth="200.0">
+               <children>
+                  <Label text="New User">
+                     <font>
+                        <Font name="Arial" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="16.0" top="16.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="15.0">
+               <children>
+                  <Label text="First Name" />
+                  <TextField fx:id="txtFirstName" prefHeight="25.0" prefWidth="178.0" />
+               </children>
+               <padding>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="68.0" prefWidth="200.0" spacing="15.0">
+               <children>
+                  <Label text="Last Name" />
+                  <TextField fx:id="txtLastName" prefHeight="25.0" prefWidth="178.0" />
+               </children>
+               <padding>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="125.0" prefWidth="200.0" spacing="42.0">
+               <children>
+                  <Label text="Email" />
+                  <TextField fx:id="txtEmail" prefHeight="25.0" prefWidth="178.0" />
+               </children>
+               <padding>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="125.0" prefWidth="200.0" spacing="30.0">
+               <children>
+                  <Label text="Birthday" />
+                  <DatePicker fx:id="dateBirthDay" />
+               </children>
+               <padding>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="239.0" prefWidth="200.0" spacing="30.0">
+               <children>
+                  <Label text="Gender" />
+                  <RadioButton fx:id="radMale" mnemonicParsing="false" onAction="#setGender" text="Male">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="setGender" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="radFemale" mnemonicParsing="false" onAction="#setGender" text="Female" toggleGroup="$setGender" />
+               </children>
+               <padding>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <Button fx:id="btnSave" mnemonicParsing="false" onAction="#save" prefHeight="25.0" prefWidth="130.0" text="Save" />
+                  <Button fx:id="btnClear" mnemonicParsing="false" onAction="#clearFields" prefWidth="130.0" text="Clear" />
+               </children>
+               <padding>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+      <ScrollPane fx:id="usersHolder" layoutX="280.0" layoutY="17.0" prefHeight="364.0" prefWidth="318.0" />
+   </children>
+</AnchorPane>
